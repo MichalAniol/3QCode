@@ -1,0 +1,91 @@
+@font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    src: url("font/Rubik-Regular.eot");
+    src: local("open sans extralight"), local("open-sans-extralight"), url("font/Rubik-Regular.eot?#iefix") format("embedded-opentype"), url("font/Rubik-Regular.woff2") format("woff2"), url("font/Rubik-Regular.woff") format("woff"), url("font/Rubik-Regular.ttf") format("truetype"), url("font/Rubik-Regular.svg#Barlow") format("svg");
+}
+
+:root {
+    --font: "Rubik", sans-serif;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+     :root {
+        --prime-color: #126612;
+        --second-color: #123312;
+        --background-color: #121212;
+    }
+}
+
+@media screen and (prefers-color-scheme: light) {
+     :root {
+        --prime-color: #006600;
+        --second-color: #87c487;
+        --background-color: #cfcfcf;
+    }
+}
+
+body {
+    margin: 10px;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--prime-color);
+    font-family: var(--font);
+    font-size: 20px;
+}
+
+.description {
+    display: block;
+    margin: 0 auto;
+    width: max-content;
+}
+
+.content {
+    display: block;
+    margin: 0 auto;
+    width: min-content;
+}
+
+h1 {
+    margin: 40px 0 0 10px;
+}
+
+h2,
+a {
+    color: var(--second-color);
+    font-size: 24px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: min-content min-content min-content min-content;
+    padding: 2px;
+    border: 1px solid var(--prime-color);
+    width: min-content;
+}
+
+.header {
+    background-color: var(--second-color);
+    border: 1px solid var(--prime-color);
+    padding: 5px 30px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.cell {
+    border: 1px solid var(--prime-color);
+    padding: 10px 30px;
+    font-size: 16px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.lp {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.name {
+    min-width: 220px;
+}
