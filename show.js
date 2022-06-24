@@ -5,6 +5,9 @@ const render = () => {
             return;
         }
 
+        let num = document.getElementById(containerName + '-num');
+        num.innerHTML = allMin.length;
+
         let container = document.getElementById(containerName);
 
         {
@@ -54,14 +57,13 @@ const render = () => {
         }
     }
 
+    if (!allMin || !data) {
+        console.error('%c !!! brak listy !!! ', 'background: red; color: #003300');
+        return;
+    }
+
     show(allMin, 'lowest');
     show(data, 'all');
-
-    let lowestNum = document.getElementById('lowest-num');
-    lowestNum.innerHTML = allMin.length;
-
-    let allNum = document.getElementById('all-num');
-    allNum.innerHTML = data.length;
 }
 
 render();
