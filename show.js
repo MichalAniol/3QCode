@@ -6,7 +6,7 @@ const render = () => {
         }
 
         let num = document.getElementById(containerName + '-num');
-        num.innerHTML = allMin.length;
+        num.innerHTML = list.length;
 
         let container = document.getElementById(containerName);
 
@@ -22,12 +22,12 @@ const render = () => {
             container.append(name);
 
             let weight = document.createElement('div');
-            weight.innerHTML = 'wzrost';
+            weight.innerHTML = 'waga';
             weight.className = 'header';
             container.append(weight);
 
             let height = document.createElement('div');
-            height.innerHTML = 'waga';
+            height.innerHTML = 'wzrost';
             height.className = 'header';
             container.append(height);
         }

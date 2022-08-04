@@ -1,5 +1,5 @@
 const LOWEST_N = 10;
-const LIST_LENGTH = 50;
+const LIST_LENGTH = 20;
 
 const data = dataFabric.getAllTable(LIST_LENGTH);
 
